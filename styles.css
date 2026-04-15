@@ -1,4 +1,5 @@
-/* =====  CSS by Christina Carrasquilla =====  */
+/* =====  CSS by Christina Carrasquilla, updated by Belen Felix =====  */
+
 
 /* ===== Color Palette 
 
@@ -11,6 +12,7 @@ Border:#E5E5E5
 
 ===== */
 
+
 /* ===== GLOBAL (Base) Styles ===== */
 
 body {
@@ -18,6 +20,8 @@ body {
     margin: 0;
     background-color: #F7F4EF;
     color: #2F2F2F;
+    display: grid;
+    grid-template: 1fr;
 }
 
 header {
@@ -30,21 +34,20 @@ header {
 header img {
     margin-top: 0.5rem;
 }
+
 header p {
-    font-style:italic;
+    font-style: italic;
 }
+
 nav {
     background-color: #2F2F2F;
-    padding:.5rem;
+    padding: .5rem;
 }
 
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
 }
 
 nav a {
@@ -52,7 +55,7 @@ nav a {
     text-decoration: none;
     padding: 0.5rem;
     display: inline-block;
-    text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 nav a:hover {
@@ -63,20 +66,28 @@ main {
     padding: 1rem;
 }
 
-section {
-    margin-bottom: 2rem;
+main a {
+    background-color: #D9A441;
+    color: #2F2F2F;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: inline-block;
+    text-transform: uppercase;
 }
 
-.card-row {
-    display: flex;
-    gap: 1rem;
+main a:hover {
+    background-color: #B35A3C;
+    color: white;
+}
+
+section {
+    margin-bottom: 2rem;
 }
 
 .card-row section {
     background-color: white;
     border: 1px solid #E5E5E5;
     padding: 1rem;
-    width: 30%;
 }
 
 img {
@@ -96,4 +107,36 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background-color: #B35A3C;
+}
+
+
+/** ===== MEDIA QUERIES (MEDIUM SIZES) ===== */
+
+@media screen and (min-width:817px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+.card-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.card-row section {
+    width: 30%;
 }
